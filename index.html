@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,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">
+    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            border: 0;
+        }
+        body{
+            margin: 0;
+        }
+        .backto-top{
+            background-color:#37475A;
+            color: white;
+            text-align: center;
+            height: 40px;
+            font-size: 20px;
+            padding-top: 20px;
+            max-width: 100%;
+        }
+        .footer-container{
+            background-color: #232F3E;
+            height: 600px;
+            margin:auto
+        }
+        .footer1{
+            
+            display: flex;
+            color: white;
+            justify-content:space-around;
+            padding-top: 30px;
+            max-width: 100%;
+        }
+        ul{
+            list-style: none;
+            color: white;
+
+        }
+        li{
+            margin-bottom: 10px;
+        } 
+        #headding1, #headding2, #headding3, #headding4{
+            font-weight: bold;
+        }
+        .logo{
+           text-align: center;
+           align-items: center;
+           
+           border-top: 50px;
+           margin-top: 30px;
+        }
+        #country{
+            
+           flex-direction: row;
+           color: white;
+           justify-content:space-around;
+           display: inline-block;
+           margin: auto;
+           list-style: inline;
+
+        }
+        .footer2{
+            display: inline-block;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #country1{
+           display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            margin: auto;
+            padding-top: 30px;
+            text-align: center;
+            color: white;
+            margin-left: 200px;
+
+        }
+        span{
+            margin-left: 20px;
+            align-items: center;
+            margin-top: 20px;
+            
+        }
+        #country2{
+            display: block;
+            color: white;
+            margin-left: 500px;
+
+        }
+        nav{
+            background-color: #131921;
+            color: #fff;
+            height:60px ;
+           display: flex;
+           justify-content: space-between;
+           padding:10px 20px;
+           align-items: center;
+           width: 100%;
+           position: sticky;
+        }   
+        .location{
+            font-size: 13px;
+            display: flex;
+            color: #c4c4c4;
+            margin-left: 15px;
+            
+        }  
+        .location h1{
+            color: #fff;
+            font-size: 14px;
+        } 
+        .search{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            color: gray;
+            max-width: 1000px;
+            border-radius: 4px;
+            margin-left: 15px;
+        }
+        .search-nav{
+            
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 5px;
+            color: white;
+            background-color: gray;
+            border-radius: 4px 0 0 4px ;
+        }
+        .search-input{
+            border: none;
+            outline: none;
+            padding-left: 20px;
+            width: 100%;
+        }
+        .nav-search-icon{
+            background-color:#ffd64f;
+            max-width: 41px;
+            padding: 8px;
+            border-radius: 0 4px 4px 0;
+        }
+        .img2{
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+        .Hello{
+            margin-left: 15px;
+        }
+        .Hello p{
+            font-size: 10px;
+        }
+        .Hello h1{
+            font-size: 14px;
+        }
+        .return{
+            margin-left: 15px;
+            font-size: 10px;
+        }
+        .return h1{
+            font-size: 14px;
+        }
+        /* .cart h4{
+            font-size: 14px;
+        } */
+        .cart{
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .nav-bottom{
+            display: flex;
+            align-items: center;
+            /* gap: 20px; */
+            padding: 8px 20px;
+            background-color: #232F3E;
+            color: #fff;
+            font-size: 15px;
+            justify-content: space-between;
+            
+
+        }
+        .nav-bottom div{
+            display: flex;
+            text-align: center;
+            gap: 5px;
+            font-weight: 900;
+        }
+        .img1{
+            margin-right: 50px;
+        }
+        #del{
+            display: inline;
+        }    
+        .banner-img{
+            max-width: 100%;
+        }
+        header{
+            
+            position: sticky;
+            top: 0;
+            width: 100%;
+
+        }
+        section{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: -225px;
+            padding: 10px;
+            grid-gap: 10px;
+            max-width: 100%;    
+        }
+        .card{
+            height: 400px;
+            box-shadow: 2px 2px 2px gray;
+            background-color: white;
+            padding: 5px;
+            width: 380px;    
+        }
+        .card4{
+            height:150px;
+            box-shadow: 2px 2px 2px gray;
+            background-color: white;
+            padding: 5px;
+            text-align: center;   
+        }
+        .row2,.row3{
+            display: grid;
+            grid-template-columns: 6fr 6fr ;
+            grid-gap: 5px;
+            padding: 5px;
+            margin: 10px;
+            margin-right: 10px;    
+        }
+        .button3{
+            background-color: hsla(60, 100%, 50%, 0.525);
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 40px;
+            height: 35%;
+            font-size: 16px;
+        }
+        .row1{
+            font-family: arial;
+            font-size: 18px;
+            font-weight: bolder;
+            margin-bottom: 4px;
+        }
+        .row4{
+            color: steelblue;
+        }
+        .iphone{
+            margin-top: 30px;
+            width: 130px;
+            height: 10px;
+        }
+        .row11{
+            font-family: arial;
+            font-size: 18px;
+            font-weight: bolder;
+            margin-top: 14px;
+        }
+        footer{
+            margin-top: 300px;
+        }
+        
+        
+        
+        
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="img1">
+                <img src="src\images\amazon_logo.png" width="100" >
+            </div>
+           <div class="location">
+            <img src="src\images\location_icon.png" height="20">
+            <div>
+                <p>Deliver to</p>
+                <h1>Hyderabad</h1>
+            </div> 
+           </div>
+           <div class="search">
+            <div class="search-nav">
+                <p>All</p>
+                <img src="src\images\down-icon.png" height="12">
+            </div>
+           
+                <input type="text" class="search-input" placeholder="search Amazon.in">
+                <img src="src\images\search_icon.png" class="nav-search-icon">
+            </div>
+           </div>
+                <div class="img2">
+                    <img src="src/images/india flag.png" width="20px">
+                    <p>EN</p> 
+                     <img src="src\images\down-icon.png" width="10px" height="10px">
+                </div>
+                
+                <div class="Hello">
+                    <p>Hello,sign in</p>
+                    <h1>Account&List  <img src="src\images\down-icon.png" width="8px"></h1>
+                </div>
+                <div class="return"><p> Returns</p> 
+                    <h1>&Oders<h1>
+                    </div>
+                <div class="cart">
+                   <img src="src/images/cart_icon.png" width="35px">
+                   <h4>cart</h4>
+                </span>
+                </span>
+
+            </nav>
+
+
+            
+    </header>
+
+    <div class="nav-bottom">
+        <div>
+            <img src="src\images\menu_icon.png" width="25px">
+            <p>All</p>
+        </div>
+        <p>Today's Deals</p>
+        <p>Customer Service</p>
+        <p>Regestry</p>
+        <p>Gift Cards</p>
+        <p>Sell</p>
+    </div>
+
+    <div class="body">
+        <div class="banner">
+            <img src="src\images\Amazonbackground.jpg"  class="banner-img">
+        </div>
+        <section>
+            <div class="card">
+                <div class="row1">
+                    Up to 60% off | Premium diapers & curated toys   
+                </div>
+                <div class="row2">
+                   <div>
+                    <img src="src\images\a1.jpg" width="160px">
+                    <p>Diapers, Wipes & more</p>
+                   </div>
+                    <div>
+                        <img src="src\images\a2.jpg" width="170px">
+                    <p>Baby Products</p>
+                    </div>
+                </div>
+                <div class="row3">
+                    <div><img src="src\images\a3.jpg" width="170px">
+                        <p>Indoor games</p></div>
+                    <div>
+                        <img src="src\images\a4.jpg" width="170px">
+                    <p>RC Cars</p>
+                    </div>
+                </div>
+                <div class="row4">
+                    <span>See more...</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row1">
+                    Up to 60% off | Electronics & Home appliences  
+                </div>
+                <div class="row2">
+                    <div><img src="src\images\a21.jpg" width="170px">
+                        <p>Eelectronics</p></div>
+                    <div>
+                        <img src="src\images\a22.jpg" width="170px">
+                    <p>Cleaning Cloths</p>
+                    </div>
+                    
+                </div>
+                <div class="row3">
+                    <div>
+                        <img src="src\images\a23.jpg" width="170px">
+                    <p>Cleaning iteams</p>
+                    </div>
+                    <div>
+                        <img src="src\images\a24.jpg" width="170px">
+                    <p>Helmate</p>
+                    </div>
+                </div>
+                <div class="row4">
+                    See more...
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="row1">
+                    Up to 60% off | Styles for men 
+                </div>
+                <div class="row2">
+                    <div>
+                        <img src="src\images\a34.jpg" width="170px">
+                    <p>Electronics</p>
+                    </div>
+                    <div>
+                        <img src="src\images\a31.jpg" width="170px">
+                    <p>Diapers, Wipes & more</p>
+                    </div>
+                </div>
+                <div class="row3">
+                    <div><img src="src\images\a32.jpg" width="170px">
+                        <p>Baby Products</p></div>
+                    <div>
+                        <img src="src\images\a33.jpg" width="170px" >
+                    <p>Indoor games</p>
+                    </div>
+                </div>
+                <div class="row4">
+                    <span>See more...</span>
+                </div>
+            </div>
+           <div class="card4">
+            <div class="row11">Sign in for best experience</div>
+            <button class="button3">Sign in Securly</button>
+            <div class="iphone">
+                <img src="src\images\a42.jpg" height="240px" width="320px">
+            </div>
+
+           </div>
+        </section>
+    </div>
+    
+    
+
+    <footer>
+        <div class="backto-top">Back to top</div>
+        <div class="footer-container">
+            <div class="footer1">
+            <span>
+                <ul>
+                    <li id="headding1">Get to Know Us</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                </ul>
+            </span>
+            <span>
+                <ul>
+                    <li id="headding2">Connet With Us</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                </ul>
+            </span>
+            <span>
+                <ul>
+                    <li id="headding3">Make Money With us</li>
+                    <li>Sell on Amazon</li>
+                    <li>Sell under Amazon Accelerator</li>
+                    <li>Product and Build Your Brand</li>
+                    <li>Amazon Global Selling</li>
+                    <li>Become an Affiliate</li>
+                    <li>Fullfilment by Amazon</li>
+                    <li>Advertise Your Products</li>
+                    <li>Amazon Pay on Merchants</li>
+                </ul>
+            </span>
+            <span>
+                <ul>
+                    <li id="headding4">Let Us Help You</li>
+                    <li>COVID-19 and Amazon</li>
+                    <li>Your  Account</li>
+                    <li>Returns Centre</li>
+                    <li>100% Purchase Protection</li>
+                    <li>Amazon App Download</li>
+                    <li>Help</li>
+                </ul>
+            </span>
+            </div>
+            <hr>
+           <hr>
+            
+        <div class="footer2">
+        
+        <div class="logo">
+            <img src="src\images\amazon_logo.png" height="23px" width="76px" >
+        </div>
+        <div>
+            <span id="country1">
+                <span>Australia</span>
+                <span>Brazil</span>
+                <span>Canada</span>
+                <span>China</span>
+                <span>France</span>
+                <span>Germany</span>
+                <span>Italy</span>
+                <span>Japan</span>
+                <span>Mexico</span>
+                <span>Netherland</span>
+                <span>Poland</span>
+                <span>Singapore</span>
+                <span>Spain</span>
+                <span>Turkey</span>
+                <span>United Arab Emirates</span>
+            </span>
+            <span id="country2">
+                <span>United Kingdom</span>
+                <span>United states</span>
+                
+            </span>
+            </div>
+        </div>
+       </div>
+    </footer>
+</body>
+</html>
